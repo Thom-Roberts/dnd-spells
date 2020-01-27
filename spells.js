@@ -1,6 +1,8 @@
-//Sword Coast Adventurer v1.2
+// Thanks to jamesyesware on github: https://github.com/jcquinlan/dnd-spells/blob/master/spells.json
+// Made some slight alterations for class to be an array
+// Sword Coast Adventurer v1.2
 
-var jsonSpellData = [
+const spells = [
   {
     "name":"Abi-Dalzim's Horrid Wilting",
     "desc":"<p>You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 10d8 necrotic damage on a failed save, or half as much damage on a successful one.You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.</p><p>This spells damage increases by 1d6 when you reach 5th Level (2d6), 11th level (3d6) and 17th level (4d6).</p>",
@@ -14,7 +16,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Necromancy",
-    "class":"Sorcerer, Wizard"
+    "class": [
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Absorb Elements",
@@ -29,7 +34,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Druid, Ranger, Wizard"
+    "class": [
+      "Druid", 
+      "Ranger", 
+      "Wizard"
+    ]
   },
   {
     "name":"Acid Splash",
@@ -43,7 +52,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Conjuration",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Aganazzar's Scorcher",
@@ -59,7 +71,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Aid",
@@ -75,7 +90,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin"
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ]
   },
   {
     "name":"Alarm",
@@ -90,7 +108,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Ranger, Ritual Caster, Wizard"
+    "class":[
+      "Ranger", 
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Alter Self",
@@ -104,7 +126,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Animal Friendship",
@@ -120,13 +145,18 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Druid, Ranger",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Nature",
     "domains":"Nature"
   },
   {
     "name":"Animal Messenger",
-    "desc":"<p>By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as “a man or woman dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.</p><p>When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell.</p>",
+    "desc":"<p>By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as \"a man or woman dressed in the uniform of the town guard\" or \"a red-haired dwarf wearing a pointed hat.\" You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.</p><p>When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell.</p>",
     "higher_level":"<p>If you cast this spell using a spell slot of 3nd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.</p>",
     "page":"phb 212",
     "range":"30 feet",
@@ -138,7 +168,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Druid, Ranger, Ritual Caster"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Ranger", 
+      "Ritual Caster"
+    ]
   },
   {
     "name":"Animal Shapes",
@@ -152,7 +187,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Animate Dead",
@@ -168,7 +205,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"3rd-level",
     "school":"Necromancy",
-    "class":"Cleric, Wizard"
+    "class":[
+      "Cleric", 
+      "Wizard"
+    ]
   },
   {
     "name":"Animate Objects",
@@ -183,7 +223,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Antilife Shell",
@@ -197,7 +241,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Abjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Antimagic Field",
@@ -212,7 +258,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Abjuration",
-    "class":"Cleric, Wizard"
+    "class":[
+      "Cleric", 
+      "Wizard"
+    ]
   },
   {
     "name":"Antipathy/Sympathy",
@@ -227,7 +276,10 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"8th-level",
     "school":"Enchantment",
-    "class":"Druid, Wizard"
+    "class":[
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Arcane Eye",
@@ -242,7 +294,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Divination",
-    "class":"Cleric, Wizard",
+    "class":[
+      "Cleric", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Knowledge",
     "domains":"Knowledge"
   },
@@ -258,7 +313,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Arcane Lock",
@@ -273,7 +332,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Abjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Armor of Agathys",
@@ -289,7 +350,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Warlock"
+    "class":[
+      "Warlock"
+    ]
   },
   {
     "name":"Arms of Hadar",
@@ -304,7 +367,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Warlock"
+    "class":[
+      "Warlock"
+    ]
   },
   {
     "name":"Astral Projection",
@@ -319,7 +384,11 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"9th-level",
     "school":"Necromancy",
-    "class":"Cleric, Warlock, Wizard"
+    "class":[
+      "Cleric", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Augury",
@@ -334,7 +403,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Cleric, Ritual Caster",
+    "class":[
+      "Cleric", 
+      "Ritual Caster"
+    ],
     "domains":"Knowledge"
   },
   {
@@ -349,7 +421,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Aura of Purity",
@@ -363,7 +437,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Aura of Vitality",
@@ -377,7 +453,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Awaken",
@@ -392,7 +470,10 @@ var jsonSpellData = [
     "casting_time":"8 hours",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Bard, Druid"
+    "class":[
+      "Bard", 
+      "Druid"
+    ]
   },
   {
     "name":"Bane",
@@ -408,7 +489,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Paladin",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Paladin: Vengeance",
     "oaths":"Vengeance"
   },
@@ -424,7 +509,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"5th-level",
     "school":"Abjuration",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Banishment",
@@ -440,7 +527,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "oaths":"Vengeance"
   },
   {
@@ -456,7 +549,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Ranger",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Nature",
     "domains":"Nature",
     "circles":"Forest"
@@ -473,7 +570,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Paladin: Devotion",
     "domains":"Life",
     "oaths":"Devotion"
@@ -491,7 +591,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Druid, Ranger, Wizard"
+    "class":[
+      "Druid", 
+      "Ranger", 
+      "Wizard"
+    ]
   },
   {
     "name":"Beast Sense",
@@ -505,7 +609,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Druid, Ranger, Ritual Caster"
+    "class":[
+      "Druid", 
+      "Ranger", 
+      "Ritual Caster"
+    ]
   },
   {
     "name":"Bestow Curse",
@@ -520,7 +628,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Necromancy",
-    "class":"Bard, Cleric, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Wizard"
+    ]
   },
   {
     "name":"Bigby's Hand",
@@ -536,7 +648,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Blade Barrier",
@@ -550,7 +664,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Blade Ward",
@@ -564,7 +680,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Abjuration",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Bless",
@@ -580,7 +701,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "domains":"Life"
   },
   {
@@ -596,7 +720,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Necromancy",
-    "class":"Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "circles":"Desert"
   },
   {
@@ -611,7 +740,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Blindness/Deafness",
@@ -626,7 +757,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Necromancy",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Fiend",
     "patrons":"Fiend"
   },
@@ -642,7 +779,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery<br/> Warlock: Archfey",
     "domains":"Trickery",
     "patrons":"Archfey"
@@ -659,7 +801,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Druid, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Druid: Desert",
     "circles":"Desert"
   },
@@ -676,7 +822,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Booming Blade",
@@ -691,7 +839,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Branding Smite",
@@ -706,7 +858,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Burning Hands",
@@ -721,7 +875,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Light<br/> Warlock: Fiend",
     "domains":"Light",
     "patrons":"Fiend"
@@ -739,7 +898,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid",
+    "class":[
+      "Cleric", 
+      "Druid"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest",
     "circles":"Forest"
@@ -756,7 +918,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Warlock",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Warlock"
+    ],
     "archetype":"Warlock: Archfey",
     "patrons":"Archfey"
   },
@@ -773,7 +939,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Chain Lightning",
@@ -789,7 +958,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Charm Person",
@@ -804,7 +976,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery",
     "domains":"Trickery"
   },
@@ -820,7 +999,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Necromancy",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Chromatic Orb",
@@ -836,7 +1019,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Circle of Death",
@@ -852,7 +1038,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Necromancy",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Circle of Power",
@@ -866,7 +1056,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Abjuration",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Clairvoyance",
@@ -881,7 +1073,13 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"3rd-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
@@ -898,7 +1096,9 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"8th-level",
     "school":"Necromancy",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Cloud of Daggers",
@@ -914,7 +1114,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Conjuration",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Cloudkill",
@@ -929,7 +1134,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Druid, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Druid: Underdark",
     "circles":"Underdark"
   },
@@ -947,7 +1156,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Illusion",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Command",
@@ -962,14 +1174,18 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Cleric, Paladin, Warlock",
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Warlock"
+    ],
     "archetype":"Warlock: Fiend",
     "domains":"Knowledge",
     "patrons":"Fiend"
   },
   {
     "name":"Commune",
-    "desc":"<p>You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.</p><p>Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the DM might offer a short phrase as an answer instead.</p><p>If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret.</p>",
+    "desc":"<p>You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.</p><p>Divine beings aren’t necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the DM might offer a short phrase as an answer instead.</p><p>If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret.</p>",
     "page":"phb 223",
     "range":"Self",
     "components":"V, S, M",
@@ -980,7 +1196,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Divination",
-    "class":"Cleric, Paladin, Ritual Caster",
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Ritual Caster"
+    ],
     "archetype":"Paladin: Devotion",
     "oaths":"Devotion"
   },
@@ -996,7 +1216,12 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Divination",
-    "class":"Druid, Paladin, Ranger, Ritual Caster",
+    "class":[
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Ritual Caster"
+    ],
     "archetype":"Paladin: Ancients",
     "circles":"Arctic, Forest",
     "oaths":"Ancients"
@@ -1013,7 +1238,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Comprehend Languages",
@@ -1028,7 +1255,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Bard, Ritual Caster, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Ritual Caster", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Compulsion",
@@ -1042,7 +1275,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Enchantment",
-    "class":"Bard"
+    "class":[
+      "Bard"
+    ]
   },
   {
     "name":"Cone of Cold",
@@ -1058,7 +1293,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Druid: Arctic",
     "circles":"Arctic"
   },
@@ -1076,7 +1315,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Druid, Sorcerer, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Knowledge",
     "domains":"Knowledge"
   },
@@ -1093,7 +1338,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Druid, Ranger"
+    "class":[
+      "Druid", 
+      "Ranger"
+    ]
   },
   {
     "name":"Conjure Barrage",
@@ -1108,7 +1356,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Ranger"
+    "class":[
+      "Ranger"
+    ]
   },
   {
     "name":"Conjure Celestial",
@@ -1123,7 +1373,9 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"7th-level",
     "school":"Conjuration",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Conjure Elemental",
@@ -1139,7 +1391,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Druid, Wizard",
+    "class":[
+      "Druid", 
+      "Wizard"
+    ],
     "circles":"Coast"
   },
   {
@@ -1155,7 +1410,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Druid, Warlock"
+    "class":[
+      "Druid", 
+      "Warlock"
+    ]
   },
   {
     "name":"Conjure Minor Elementals",
@@ -1170,7 +1428,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Druid, Wizard"
+    "class":[
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Conjure Volley",
@@ -1185,7 +1446,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Ranger"
+    "class":[
+      "Ranger"
+    ]
   },
   {
     "name":"Conjure Woodland Beings",
@@ -1201,11 +1464,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Druid, Ranger"
+    "class":[
+      "Druid", 
+      "Ranger"
+    ]
   },
   {
     "name":"Contact Other Plane",
-    "desc":"<p>You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 intelligence saving throw. On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can’t take actions, can’t understand what other creatures say, can’t read, and speak only in gibberish. A greater restoration spell cast on you ends this effect.</p><p>On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as “yes,” “no,” “maybe,” “never,” “irrelevant,” or “unclear” (if the entity doesn’t know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.</p>",
+    "desc":"<p>You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 intelligence saving throw. On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can’t take actions, can’t understand what other creatures say, can’t read, and speak only in gibberish. A greater restoration spell cast on you ends this effect.</p><p>On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as \"yes,\" \"no,\" \"maybe,\" \"never,\" \"irrelevant,\" or \"unclear\" (if the entity doesn’t know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.</p>",
     "page":"phb 226",
     "range":"Self",
     "components":"V",
@@ -1215,7 +1481,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Divination",
-    "class":"Ritual Caster, Warlock, Wizard"
+    "class":[
+      "Ritual Caster", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Contagion",
@@ -1229,7 +1499,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Necromancy",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Contingency",
@@ -1244,7 +1517,9 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Continual Flame",
@@ -1259,7 +1534,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Cleric, Wizard"
+    "class":[
+      "Cleric", 
+      "Wizard"
+    ]
   },
   {
     "name":"Control Flames",
@@ -1273,7 +1551,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Control Water",
@@ -1288,7 +1570,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Wizard"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Control Weather",
@@ -1303,7 +1589,11 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"8th-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Wizard"
+    ],
     "domains":"Tempest",
     "circles":"Coast"
   },
@@ -1319,7 +1609,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Cordon of Arrows",
@@ -1335,7 +1629,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Ranger"
+    "class":[
+      "Ranger"
+    ]
   },
   {
     "name":"Counterspell",
@@ -1350,7 +1646,11 @@ var jsonSpellData = [
     "casting_time":"1 reaction",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Create Bonfire",
@@ -1364,7 +1664,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Conjuration",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Create Food and Water",
@@ -1378,7 +1683,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Paladin",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin"
+    ],
     "archetype":"Druid: Desert",
     "circles":"Desert"
   },
@@ -1396,7 +1705,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Create Undead",
@@ -1412,7 +1724,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"6th-level",
     "school":"Necromancy",
-    "class":"Cleric, Warlock, Wizard"
+    "class":[
+      "Cleric", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Creation",
@@ -1428,7 +1744,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Illusion",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Crown of Madness",
@@ -1442,7 +1761,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Crusader's Mantle",
@@ -1456,7 +1780,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Cleric: War",
     "domains":"War"
   },
@@ -1473,7 +1800,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger"
+    ],
     "domains":"Life"
   },
   {
@@ -1489,7 +1822,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Darkness",
@@ -1504,7 +1841,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Swamp",
     "circles":"Swamp"
   },
@@ -1521,7 +1863,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Druid, Ranger, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Ranger", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Daylight",
@@ -1535,7 +1882,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Paladin, Ranger, Sorcerer",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Sorcerer"
+    ],
     "domains":"Light",
     "circles":"Grassland"
   },
@@ -1551,7 +1904,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "domains":"Life"
   },
   {
@@ -1568,7 +1924,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Demiplane",
@@ -1582,7 +1941,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Conjuration",
-    "class":"Warlock, Wizard"
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Destructive Wave",
@@ -1596,7 +1958,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest"
   },
@@ -1612,7 +1977,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Cleric, Paladin"
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ]
   },
   {
     "name":"Detect Magic",
@@ -1626,7 +1994,16 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger, Ritual Caster, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Ritual Caster", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Detect Poison and Disease",
@@ -1641,7 +2018,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Cleric, Druid, Paladin, Ranger, Ritual Caster"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Ritual Caster"
+    ]
   },
   {
     "name":"Detect Thoughts",
@@ -1656,13 +2039,18 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Bard, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
   {
     "name":"Dimension Door",
-    "desc":"<p>You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as “200 feet straight downward” or “upward to the northwest at a 45-degree angle, 300 feet.”</p><p>You can bring along objects as long as their weight doesn’t exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.</p><p>If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.</p>",
+    "desc":"<p>You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"</p><p>You can bring along objects as long as their weight doesn’t exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.</p><p>If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.</p>",
     "page":"phb 233",
     "range":"500 feet",
     "components":"V",
@@ -1672,7 +2060,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Bard, Cleric, Paladin, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Paladin", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery<br/> Paladin: Vengeance",
     "domains":"Trickery",
     "oaths":"Vengeance"
@@ -1689,7 +2084,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Illusion",
-    "class":"Bard, Cleric, Sorcerer, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery",
     "domains":"Trickery"
   },
@@ -1707,7 +2107,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Dispel Evil and Good",
@@ -1722,7 +2125,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin"
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ]
   },
   {
     "name":"Dispel Magic",
@@ -1737,7 +2143,15 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Druid, Paladin, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery",
     "domains":"Trickery",
     "oaths":"Devotion"
@@ -1755,7 +2169,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Warlock",
+    "class":[
+      "Bard", 
+      "Warlock"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
@@ -1772,7 +2189,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Divination",
-    "class":"Cleric, Druid, Ritual Caster",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ritual Caster"
+    ],
     "archetype":"Druid: Forest, Grassland",
     "circles":"Forest, Grassland"
   },
@@ -1788,7 +2209,10 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Cleric: War",
     "domains":"War"
   },
@@ -1804,7 +2228,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Dominate Beast",
@@ -1819,7 +2245,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Enchantment",
-    "class":"Cleric, Druid, Sorcerer, Warlock",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock"
+    ],
     "archetype":"Cleric: Nature<br/> Warlock: Archfey, Great Old One",
     "domains":"Nature",
     "patrons":"Archfey, Great Old One"
@@ -1837,11 +2268,14 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Ritual Caster, Wizard"
+    "class":[
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Dominate Monster",
-    "desc":"<p>You attempt to beguile a creature that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.</p><p>While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability.</p><p>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p><p>Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.</p>",
+    "desc":"<p>You attempt to beguile a creature that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.</p><p>While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability.</p><p>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p><p>Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.</p>",
     "higher_level":"<p>When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours.</p>",
     "page":"phb 235",
     "range":"60 feet",
@@ -1852,11 +2286,16 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Dominate Person",
-    "desc":"<p>You attempt to beguile a humanoid that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.</p><p>While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability.</p><p>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p><p>Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.</p>",
+    "desc":"<p>You attempt to beguile a humanoid that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.</p><p>While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability.</p><p>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p><p>Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.</p>",
     "higher_level":"<p>When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.</p>",
     "page":"phb 235",
     "range":"60 feet",
@@ -1867,7 +2306,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery<br/> Warlock: Archfey, Great Old One",
     "domains":"Trickery",
     "patrons":"Archfey, Great Old One"
@@ -1885,7 +2330,12 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Illusion",
-    "class":"Bard, Druid, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Grassland",
     "circles":"Grassland"
   },
@@ -1901,7 +2351,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Dust Devil",
@@ -1917,7 +2369,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Conjuration",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Earth Tremor",
@@ -1932,7 +2388,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Bard, Druid, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Earthbind",
@@ -1946,7 +2407,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Earthquake",
@@ -1961,7 +2427,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Sorcerer"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer"
+    ]
   },
   {
     "name":"Eldritch Blast",
@@ -1975,7 +2445,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Warlock"
+    "class":[
+      "Warlock"
+    ]
   },
   {
     "name":"Elemental Bane",
@@ -1990,7 +2462,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Transmutation",
-    "class":"Druid, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Elemental Weapon",
@@ -2005,7 +2481,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Enhance Ability",
@@ -2021,7 +2499,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Bard, Cleric, Druid, Sorcerer"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Sorcerer"
+    ]
   },
   {
     "name":"Enlarge/Reduce",
@@ -2036,7 +2519,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Ensnaring Strike",
@@ -2051,7 +2537,10 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Paladin, Ranger",
+    "class":[
+      "Paladin", 
+      "Ranger"
+    ],
     "archetype":"Paladin: Ancients",
     "oaths":"Ancients"
   },
@@ -2067,7 +2556,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Enthrall",
@@ -2081,7 +2572,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Warlock"
+    "class":[
+      "Bard", 
+      "Warlock"
+    ]
   },
   {
     "name":"Erupting Earth",
@@ -2097,7 +2591,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Etherealness",
@@ -2112,7 +2610,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Transmutation",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Evard's Black Tentacles",
@@ -2127,7 +2631,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Warlock, Wizard",
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
@@ -2143,7 +2650,11 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Eyebite",
@@ -2157,7 +2668,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Necromancy",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Fabricate",
@@ -2171,7 +2687,9 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"4th-level",
     "school":"Transmutation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Faerie Fire",
@@ -2185,7 +2703,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Bard, Cleric, Druid, Warlock",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Warlock"
+    ],
     "archetype":"Cleric: Light<br/> Warlock: Archfey",
     "domains":"Light",
     "patrons":"Archfey"
@@ -2204,7 +2727,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Necromancy",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Fear",
@@ -2219,7 +2745,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Feather Fall",
@@ -2234,7 +2765,11 @@ var jsonSpellData = [
     "casting_time":"1 reaction",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Feeblemind",
@@ -2249,7 +2784,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Enchantment",
-    "class":"Bard, Druid, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Feign Death",
@@ -2264,7 +2804,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Necromancy",
-    "class":"Bard, Cleric, Druid, Ritual Caster, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Find Familiar",
@@ -2279,7 +2825,10 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Ritual Caster, Wizard"
+    "class":[
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Find Steed",
@@ -2293,11 +2842,13 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"2nd-level",
     "school":"Conjuration",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Find the Path",
-    "desc":"<p>This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as “a green dragon’s lair”), the spell fails.</p><p>For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.</p>",
+    "desc":"<p>This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as \"a green dragon’s lair\"), the spell fails.</p><p>For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.</p>",
     "page":"phb 240",
     "range":"Self",
     "components":"V, S, M",
@@ -2308,7 +2859,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"6th-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Druid"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Find Traps",
@@ -2322,7 +2877,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Cleric, Druid, Ranger"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ]
   },
   {
     "name":"Finger of Death",
@@ -2336,7 +2895,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Necromancy",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Fireball",
@@ -2352,7 +2915,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Light<br/> Warlock: Fiend",
     "domains":"Light",
     "patrons":"Fiend"
@@ -2369,7 +2937,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Fire Shield",
@@ -2384,7 +2955,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Warlock, Wizard",
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Fiend",
     "patrons":"Fiend"
   },
@@ -2400,7 +2974,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Sorcerer"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer"
+    ]
   },
   {
     "name":"Flame Arrows",
@@ -2415,7 +2993,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Druid, Ranger, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Ranger", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Flame Blade",
@@ -2431,7 +3014,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Flame Strike",
@@ -2447,7 +3032,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Cleric, Paladin, Warlock",
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Warlock"
+    ],
     "archetype":"Paladin: Devotion<br/> Warlock: Fiend",
     "domains":"Light, War",
     "oaths":"Devotion",
@@ -2467,7 +3056,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Light",
     "domains":"Light"
   },
@@ -2484,7 +3077,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Warlock, Wizard"
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Fly",
@@ -2500,7 +3096,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Fog Cloud",
@@ -2515,7 +3115,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Ranger, Sorcerer, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest"
   },
@@ -2532,7 +3138,10 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"6th-level",
     "school":"Abjuration",
-    "class":"Cleric, Ritual Caster"
+    "class":[
+      "Cleric", 
+      "Ritual Caster"
+    ]
   },
   {
     "name":"Forcecage",
@@ -2547,7 +3156,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Bard, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Foresight",
@@ -2562,7 +3175,12 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"9th-level",
     "school":"Divination",
-    "class":"Bard, Druid, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Freedom of Movement",
@@ -2577,7 +3195,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger"
+    ],
     "archetype":"Paladin: Devotion",
     "domains":"War",
     "circles":"Arctic, Coast, Forest, Grassland, Swamp",
@@ -2596,7 +3220,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Frostbite",
@@ -2610,7 +3239,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Gaseous Form",
@@ -2625,7 +3259,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Underdark",
     "circles":"Underdark"
   },
@@ -2642,7 +3281,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Conjuration",
-    "class":"Cleric, Sorcerer, Wizard"
+    "class":[
+      "Cleric", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Geas",
@@ -2657,7 +3300,13 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Druid, Paladin, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Wizard"
+    ]
   },
   {
     "name":"Gentle Repose",
@@ -2672,7 +3321,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Necromancy",
-    "class":"Cleric, Ritual Caster, Wizard"
+    "class":[
+      "Cleric", 
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Giant Insect",
@@ -2686,7 +3339,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Glibness",
@@ -2700,7 +3355,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Transmutation",
-    "class":"Bard, Warlock"
+    "class":[
+      "Bard", 
+      "Warlock"
+    ]
   },
   {
     "name":"Globe of Invulnerability",
@@ -2716,7 +3374,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Abjuration",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Glyph of Warding",
@@ -2732,7 +3393,11 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Wizard"
+    ]
   },
   {
     "name":"Goodberry",
@@ -2747,7 +3412,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Druid, Ranger"
+    "class":[
+      "Druid", 
+      "Ranger"
+    ]
   },
   {
     "name":"Grasping Vine",
@@ -2761,7 +3429,11 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Ranger",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Nature",
     "domains":"Nature"
   },
@@ -2778,7 +3450,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Greater Invisibility",
@@ -2792,7 +3466,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Illusion",
-    "class":"Bard, Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Underdark<br/> Warlock: Archfey",
     "circles":"Underdark",
     "patrons":"Archfey"
@@ -2810,7 +3490,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Druid"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Green-Flame Blade",
@@ -2825,7 +3509,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Guardian of Faith",
@@ -2839,7 +3527,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Paladin: Devotion",
     "domains":"Life, Light",
     "oaths":"Devotion"
@@ -2857,7 +3548,10 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"6th-level",
     "school":"Abjuration",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Guidance",
@@ -2871,7 +3565,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Divination",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Guiding Bolt",
@@ -2886,7 +3583,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Gust",
@@ -2900,7 +3599,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Gust of Wind",
@@ -2915,7 +3618,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Sorcerer, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest"
   },
@@ -2932,7 +3640,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Ranger"
+    "class":[
+      "Ranger"
+    ]
   },
   {
     "name":"Hallow",
@@ -2947,7 +3657,10 @@ var jsonSpellData = [
     "casting_time":"24 hours",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Cleric, Warlock",
+    "class":[
+      "Cleric", 
+      "Warlock"
+    ],
     "archetype":"Warlock: Fiend",
     "patrons":"Fiend"
   },
@@ -2964,7 +3677,12 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"4th-level",
     "school":"Illusion",
-    "class":"Bard, Druid, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Warlock", 
+      "Wizard"
+    ],
     "circles":"Desert"
   },
   {
@@ -2979,7 +3697,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Necromancy",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Haste",
@@ -2994,7 +3714,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Druid, Paladin, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Paladin", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Druid: Grassland<br/> Paladin: Vengeance",
     "circles":"Grassland",
     "oaths":"Vengeance"
@@ -3012,7 +3737,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Healing Word",
@@ -3027,7 +3755,11 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Bard, Cleric, Druid"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Heat Metal",
@@ -3043,7 +3775,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Bard, Druid"
+    "class":[
+      "Bard", 
+      "Druid"
+    ]
   },
   {
     "name":"Hellish Rebuke",
@@ -3058,7 +3793,9 @@ var jsonSpellData = [
     "casting_time":"1 reaction",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Warlock"
+    "class":[
+      "Warlock"
+    ]
   },
   {
     "name":"Heroes' Feast",
@@ -3073,7 +3810,10 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Heroism",
@@ -3087,7 +3827,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Paladin"
+    "class":[
+      "Bard", 
+      "Paladin"
+    ]
   },
   {
     "name":"Hex",
@@ -3103,7 +3846,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Warlock"
+    "class":[
+      "Warlock"
+    ]
   },
   {
     "name":"Hold Monster",
@@ -3119,7 +3864,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Paladin, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Paladin", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: War<br/> Paladin: Vengeance",
     "domains":"War",
     "oaths":"Vengeance"
@@ -3138,7 +3890,15 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Druid, Paladin, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Paladin: Vengeance",
     "circles":"Arctic",
     "oaths":"Vengeance"
@@ -3156,7 +3916,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Abjuration",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Hunger of Hadar",
@@ -3171,7 +3933,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Warlock"
+    "class":[
+      "Warlock"
+    ]
   },
   {
     "name":"Hunter's Mark",
@@ -3186,7 +3950,10 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Paladin, Ranger",
+    "class":[
+      "Paladin", 
+      "Ranger"
+    ],
     "archetype":"Paladin: Vengeance",
     "oaths":"Vengeance"
   },
@@ -3203,7 +3970,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Ice Knife",
@@ -3219,7 +3991,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Ice Storm",
@@ -3235,7 +4011,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Paladin, Sorcerer, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Tempest<br/> Paladin: Ancients",
     "domains":"Tempest",
     "circles":"Arctic",
@@ -3254,7 +4036,12 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Ritual Caster, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Ritual Caster", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Knowledge",
     "domains":"Knowledge"
   },
@@ -3271,7 +4058,12 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"1st-level",
     "school":"Illusion",
-    "class":"Bard, Ritual Caster, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Ritual Caster", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Immolation",
@@ -3285,7 +4077,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Imprisonment",
@@ -3300,7 +4095,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"9th-level",
     "school":"Abjuration",
-    "class":"Warlock, Wizard"
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Incendiary Cloud",
@@ -3314,7 +4112,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Conjuration",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Inflict Wounds",
@@ -3329,7 +4130,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Necromancy",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Insect Plague",
@@ -3345,7 +4148,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Sorcerer",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer"
+    ],
     "domains":"Nature, Tempest",
     "circles":"Desert, Grassland, Swamp, Underdark"
   },
@@ -3361,7 +4168,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Investiture of Ice",
@@ -3375,7 +4187,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Investiture of Stone",
@@ -3389,7 +4206,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Investiture of Wind",
@@ -3403,7 +4225,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Invisibility",
@@ -3419,7 +4246,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Bard, Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Grassland",
     "circles":"Grassland"
   },
@@ -3436,7 +4269,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Druid, Ranger, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Ranger", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Knock",
@@ -3450,7 +4288,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Legend Lore",
@@ -3465,7 +4307,11 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"5th-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Wizard"
+    ],
     "domains":"Knowledge"
   },
   {
@@ -3481,7 +4327,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
 
   {
@@ -3497,7 +4345,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Bard, Ritual Caster, Wizard"
+    "class":[
+      "Bard", 
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Lesser Restoration",
@@ -3511,7 +4363,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger"
+    ],
     "domains":"Life",
     "oaths":"Devotion"
   },
@@ -3528,7 +4386,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Light",
@@ -3543,7 +4404,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Bard, Cleric, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Lightning Arrow",
@@ -3558,7 +4424,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Ranger"
+    "class":[
+      "Ranger"
+    ]
   },
   {
     "name":"Lightning Bolt",
@@ -3574,7 +4442,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Druid: Mountain",
     "circles":"Mountain"
   },
@@ -3590,7 +4462,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Locate Animals or Plants",
@@ -3605,7 +4481,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Bard, Druid, Ranger, Ritual Caster"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Ranger", 
+      "Ritual Caster"
+    ]
   },
   {
     "name":"Locate Creature",
@@ -3620,7 +4501,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Wizard"
+    ],
     "circles":"Swamp"
   },
   {
@@ -3636,7 +4524,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Wizard"
+    ]
   },
   {
     "name":"Longstrider",
@@ -3652,7 +4547,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Bard, Druid, Ranger, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Ranger", 
+      "Wizard"
+    ]
   },
   {
     "name":"Maelstrom",
@@ -3667,7 +4567,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Mage Armor",
@@ -3682,7 +4584,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mage Hand",
@@ -3696,7 +4601,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Conjuration",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Magic Circle",
@@ -3712,7 +4622,12 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin, Warlock, Wizard"
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Magic Jar",
@@ -3727,7 +4642,9 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"6th-level",
     "school":"Necromancy",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Magic Missile",
@@ -3742,7 +4659,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Magic Mouth",
@@ -3757,7 +4677,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Bard, Ritual Caster, Wizard"
+    "class":[
+      "Bard", 
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Magic Stone",
@@ -3771,7 +4695,10 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid, Warlock"
+    "class":[
+      "Druid", 
+      "Warlock"
+    ]
   },
   {
     "name":"Magic Weapon",
@@ -3786,7 +4713,11 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Cleric, Paladin, Wizard",
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Wizard"
+    ],
     "archetype":"Cleric: War",
     "domains":"War"
   },
@@ -3804,7 +4735,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mass Cure Wounds",
@@ -3819,7 +4755,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Bard, Cleric, Druid",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid"
+    ],
     "domains":"Life"
   },
   {
@@ -3834,7 +4774,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Conjuration",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Mass Healing Word",
@@ -3849,7 +4791,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Mass Suggestion",
@@ -3865,7 +4809,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Maximilian's Earthen Grasp",
@@ -3880,7 +4829,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Maze",
@@ -3894,7 +4846,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Conjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Meld into Stone",
@@ -3908,7 +4862,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Ritual Caster",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ritual Caster"
+    ],
     "archetype":"Druid: Mountain",
     "circles":"Mountain"
   },
@@ -3926,7 +4884,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Druid, Wizard",
+    "class":[
+      "Druid", 
+      "Wizard"
+    ],
     "archetype":"Druid: Swamp",
     "circles":"Swamp"
   },
@@ -3944,7 +4905,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mending",
@@ -3959,7 +4923,13 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Cleric, Bard, Druid, Sorcerer, Wizard"
+    "class":[
+      "Cleric", 
+      "Bard", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Message",
@@ -3974,7 +4944,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Meteor Swarm",
@@ -3988,7 +4962,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mind Blank",
@@ -4002,7 +4979,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Abjuration",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Minor Illusion",
@@ -4017,7 +4997,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mirage Arcane",
@@ -4031,7 +5016,11 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"7th-level",
     "school":"Illusion",
-    "class":"Bard, Druid, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mirror Image",
@@ -4045,7 +5034,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Cleric, Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery<br/> Druid: Coast",
     "domains":"Trickery",
     "circles":"Coast"
@@ -4062,7 +5057,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Illusion",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Misty Step",
@@ -4076,7 +5074,13 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"2nd-level",
     "school":"Conjuration",
-    "class":"Druid, Paladin, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Druid", 
+      "Paladin", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Coast<br/> Paladin: Ancients, Vengeance",
     "circles":"Coast",
     "oaths":"Ancients, Vengeance"
@@ -4094,7 +5098,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery",
     "domains":"Trickery"
   },
@@ -4110,7 +5118,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Moonbeam",
@@ -4126,7 +5138,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Druid, Paladin",
+    "class":[
+      "Druid", 
+      "Paladin"
+    ],
     "archetype":"Paladin: Ancients",
     "oaths":"Ancients"
   },
@@ -4143,7 +5158,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Mordenkainen's Magnificent Mansion",
@@ -4158,7 +5175,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"7th-level",
     "school":"Conjuration",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Mordenkainen's Private Sanctum",
@@ -4174,7 +5194,9 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Mordenkainen's Sword",
@@ -4189,7 +5211,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Move Earth",
@@ -4204,7 +5229,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Nondetection",
@@ -4219,7 +5248,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Ranger, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Ranger", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Knowledge",
     "domains":"Knowledge"
   },
@@ -4236,7 +5270,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Otiluke's Freezing Sphere",
@@ -4252,7 +5288,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Otiluke's Resilient Sphere",
@@ -4267,7 +5305,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Otto's Irresistible Dance",
@@ -4281,7 +5321,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Enchantment",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Pass without Trace",
@@ -4296,7 +5339,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Abjuration",
-    "class":"Cleric, Druid, Ranger",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Trickery",
     "domains":"Trickery",
     "circles":"Grassland"
@@ -4314,7 +5361,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Druid, Wizard",
+    "class":[
+      "Druid", 
+      "Wizard"
+    ],
     "archetype":"Druid: Mountain",
     "circles":"Mountain"
   },
@@ -4331,7 +5381,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Phantasmal Force",
@@ -4346,7 +5401,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Archfey, Great Old One",
     "patrons":"Archfey, Great Old One"
   },
@@ -4363,7 +5423,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Illusion",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Phantom Steed",
@@ -4377,7 +5439,10 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"3rd-level",
     "school":"Illusion",
-    "class":"Ritual Caster, Wizard"
+    "class":[
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Planar Ally",
@@ -4391,7 +5456,9 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Planar Binding",
@@ -4407,7 +5474,12 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"5th-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Druid, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Plane Shift",
@@ -4422,7 +5494,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Conjuration",
-    "class":"Cleric, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Plant Growth",
@@ -4436,7 +5513,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger, Warlock",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Warlock"
+    ],
     "archetype":"Cleric: Nature<br/> Paladin: Ancients<br/> Warlock: Archfey",
     "domains":"Nature",
     "circles":"Forest",
@@ -4455,7 +5539,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Conjuration",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Polymorph",
@@ -4470,7 +5558,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Transmutation",
-    "class":"Bard, Cleric, Druid, Sorcerer, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Trickery",
     "domains":"Trickery"
   },
@@ -4486,7 +5580,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Evocation",
-    "class":"Bard"
+    "class":[
+      "Bard"
+    ]
   },
   {
     "name":"Power Word Kill",
@@ -4500,7 +5596,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Power Word Stun",
@@ -4514,7 +5615,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Prayer of Healing",
@@ -4529,7 +5635,9 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Prestidigitation",
@@ -4543,7 +5651,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Primordial Ward",
@@ -4557,7 +5670,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Abjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Prismatic Spray",
@@ -4571,7 +5686,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Prismatic Wall",
@@ -4585,7 +5703,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Abjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Produce Flame",
@@ -4599,7 +5719,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Conjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Programmed Illusion",
@@ -4614,7 +5736,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Illusion",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Project Image",
@@ -4629,7 +5754,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Illusion",
-    "class":"Bard, Wizard"
+    "class":[
+      "Bard", 
+      "Wizard"
+    ]
   },
   {
     "name":"Protection from Energy",
@@ -4643,7 +5771,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Cleric, Druid, Paladin, Ranger, Sorcerer, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Paladin: Ancients, Vengeance",
     "circles":"Desert",
     "oaths":"Ancients, Vengeance"
@@ -4661,7 +5796,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Warlock", 
+      "Wizard"
+    ],
     "oaths":"Devotion"
   },
   {
@@ -4676,7 +5816,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Abjuration",
-    "class":"Cleric, Druid, Paladin, Ranger"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger"
+    ]
   },
   {
     "name":"Purify Food and Drink",
@@ -4690,7 +5835,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Paladin, Ritual Caster"
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ritual Caster"
+    ]
   },
   {
     "name":"Pyrotechnics",
@@ -4704,7 +5854,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Raise Dead",
@@ -4719,7 +5873,11 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"5th-level",
     "school":"Necromancy",
-    "class":"Bard, Cleric, Paladin",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Paladin"
+    ],
     "domains":"Life"
   },
   {
@@ -4735,7 +5893,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Divination",
-    "class":"Ritual Caster, Wizard"
+    "class":[
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Ray of Enfeeblement",
@@ -4749,7 +5910,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Necromancy",
-    "class":"Warlock, Wizard"
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Ray of Frost",
@@ -4763,7 +5927,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Ray of Sickness",
@@ -4778,7 +5945,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Necromancy",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Regenerate",
@@ -4793,7 +5963,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"7th-level",
     "school":"Transmutation",
-    "class":"Bard, Cleric, Druid"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Reincarnate",
@@ -4808,7 +5982,9 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Remove Curse",
@@ -4822,7 +5998,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin, Warlock, Wizard"
+    "class":[
+      "Cleric", 
+      "Paladin", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Resistance",
@@ -4837,7 +6018,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Abjuration",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"Resurrection",
@@ -4852,7 +6036,10 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"7th-level",
     "school":"Necromancy",
-    "class":"Bard, Cleric"
+    "class":[
+      "Bard", 
+      "Cleric"
+    ]
   },
   {
     "name":"Reverse Gravity",
@@ -4867,7 +6054,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Revivify",
@@ -4882,7 +6073,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "domains":"Life"
   },
   {
@@ -4898,7 +6092,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Sacred Flame",
@@ -4912,7 +6108,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Sanctuary",
@@ -4927,7 +6125,10 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "archetype":"Paladin: Devotion",
     "oaths":"Devotion"
   },
@@ -4944,7 +6145,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Light<br/> Warlock: Fiend",
     "domains":"Light",
     "patrons":"Fiend"
@@ -4962,7 +6168,14 @@ var jsonSpellData = [
     "casting_time":"10 minutes",
     "level":"5th-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Druid, Paladin, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Paladin: Vengeance",
     "domains":"Knowledge, Light",
     "circles":"Coast, Swamp",
@@ -4981,7 +6194,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"See Invisibility",
@@ -4996,7 +6211,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Divination",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Seeming",
@@ -5010,7 +6229,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Archfey",
     "patrons":"Archfey"
   },
@@ -5027,13 +6251,18 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Bard, Cleric, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
   {
     "name":"Sequester",
-    "desc":"<p>By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes invisible and can’t be targeted by divination spells or perceived through scrying sensors created by divination spells.</p><p>If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn’t grow older.</p><p>You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include “after 1,000 years” or “when the tarrasque awakens.” This spell also ends if the target takes any damage.</p>",
+    "desc":"<p>By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes invisible and can’t be targeted by divination spells or perceived through scrying sensors created by divination spells.</p><p>If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn’t grow older.</p><p>You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage.</p>",
     "page":"phb 274",
     "range":"Touch",
     "components":"V, S, M",
@@ -5044,7 +6273,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Transmutation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Shape Water",
@@ -5058,7 +6289,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Shapechange",
@@ -5073,7 +6308,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Transmutation",
-    "class":"Druid, Wizard"
+    "class":[
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Shatter",
@@ -5089,7 +6327,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest"
   },
@@ -5105,7 +6349,10 @@ var jsonSpellData = [
     "casting_time":"1 reaction",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Shield of Faith",
@@ -5120,7 +6367,10 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Abjuration",
-    "class":"Cleric, Paladin",
+    "class":[
+      "Cleric", 
+      "Paladin"
+    ],
     "domains":"War"
   },
   {
@@ -5136,7 +6386,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Shocking Grasp",
@@ -5150,7 +6402,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Silence",
@@ -5164,7 +6419,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Illusion",
-    "class":"Bard, Cleric, Druid, Ranger, Ritual Caster",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Ranger", 
+      "Ritual Caster"
+    ],
     "archetype":"Druid: Desert",
     "circles":"Desert"
   },
@@ -5181,7 +6442,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Illusion",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Simulacrum",
@@ -5196,7 +6461,9 @@ var jsonSpellData = [
     "casting_time":"12 hours",
     "level":"7th-level",
     "school":"Illusion",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Skywrite",
@@ -5210,7 +6477,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Bard, Druid, Ritual Caster, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Sleep",
@@ -5226,7 +6498,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Archfey",
     "patrons":"Archfey"
   },
@@ -5243,7 +6520,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Sorcerer, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest",
     "circles":"Arctic"
@@ -5261,7 +6543,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Druid: Arctic",
     "circles":"Arctic"
   },
@@ -5279,7 +6565,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Spare the Dying",
@@ -5293,7 +6582,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Necromancy",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Speak with Animals",
@@ -5307,7 +6598,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Druid, Paladin, Ranger, Ritual Caster",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Ritual Caster"
+    ],
     "archetype":"Cleric: Nature<br/> Paladin: Ancients",
     "domains":"Nature",
     "oaths":"Ancients"
@@ -5325,7 +6623,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Necromancy",
-    "class":"Bard, Cleric",
+    "class":[
+      "Bard", 
+      "Cleric"
+    ],
     "domains":"Knowledge"
   },
   {
@@ -5340,7 +6641,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Bard, Druid, Ranger"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Ranger"
+    ]
   },
   {
     "name":"Spider Climb",
@@ -5355,7 +6660,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Forest, Mountain, Underdark",
     "circles":"Forest, Mountain, Underdark"
   },
@@ -5372,7 +6682,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Ranger",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Nature",
     "domains":"Nature",
     "circles":"Arctic, Mountain"
@@ -5391,7 +6705,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Cleric",
+    "class":[
+      "Cleric"
+    ],
     "domains":"War"
   },
   {
@@ -5407,7 +6723,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Cleric",
+    "class":[
+      "Cleric"
+    ],
     "domains":"Life, War"
   },
   {
@@ -5422,7 +6740,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Stinking Cloud",
@@ -5437,7 +6757,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Bard, Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Druid: Swamp, Underdark<br/> Warlock: Fiend",
     "circles":"Swamp, Underdark",
     "patrons":"Fiend"
@@ -5455,7 +6781,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Wizard"
+    ],
     "circles":"Mountain, Underdark"
   },
   {
@@ -5471,7 +6801,14 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Abjuration",
-    "class":"Cleric, Druid, Paladin, Ranger, Sorcerer, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: War<br/> Paladin: Ancients",
     "domains":"War",
     "circles":"Mountain",
@@ -5489,7 +6826,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Conjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Storm Sphere",
@@ -5504,7 +6843,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Suggestion",
@@ -5519,7 +6861,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Knowledge",
     "domains":"Knowledge"
   },
@@ -5536,7 +6884,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Sunburst",
@@ -5551,7 +6903,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Swift Quiver",
@@ -5566,7 +6922,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Ranger"
+    "class":[
+      "Ranger"
+    ]
   },
   {
     "name":"Sword Burst",
@@ -5580,7 +6938,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Conjuration",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Symbol",
@@ -5595,7 +6957,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"7th-level",
     "school":"Abjuration",
-    "class":"Bard, Cleric, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Wizard"
+    ]
   },
   {
     "name":"Tasha's Hideous Laughter",
@@ -5610,7 +6976,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Enchantment",
-    "class":"Bard, Warlock, Wizard",
+    "class":[
+      "Bard", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
@@ -5626,7 +6996,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Warlock, Wizard",
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Warlock: Great Old One",
     "patrons":"Great Old One"
   },
@@ -5643,7 +7017,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"8th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Teleport",
@@ -5657,7 +7033,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Conjuration",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Teleportation Circle",
@@ -5672,7 +7052,11 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Bard, Sorcerer, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Tenser's Floating Disk",
@@ -5687,7 +7071,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Ritual Caster, Wizard"
+    "class":[
+      "Ritual Caster", 
+      "Wizard"
+    ]
   },
   {
     "name":"Thaumaturgy",
@@ -5701,7 +7088,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Thorn Whip",
@@ -5716,7 +7105,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Thunderous Smite",
@@ -5730,7 +7121,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Thunderclap",
@@ -5744,7 +7137,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Evocation",
-    "class":"Bard, Druid, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Thunderwave",
@@ -5759,7 +7158,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Bard, Cleric, Druid, Sorcerer, Wizard",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Tempest",
     "domains":"Tempest"
   },
@@ -5776,7 +7181,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Conjuration",
-    "class":"Druid, Wizard"
+    "class":[
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Time Stop",
@@ -5790,7 +7198,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Transmutation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Tongues",
@@ -5805,7 +7216,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Transmute Rock",
@@ -5820,7 +7237,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Transmutation",
-    "class":"Druid, Wizard"
+    "class":[
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Transport via Plants",
@@ -5834,7 +7254,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
 
   {
@@ -5849,7 +7271,9 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"8th-level",
     "school":"Conjuration",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
 
   {
@@ -5864,7 +7288,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Conjuration",
-    "class":"Cleric, Druid, Paladin, Ranger",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Paladin", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Nature<br/> Paladin: Ancients",
     "domains":"Nature",
     "circles":"Forest",
@@ -5883,7 +7312,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Transmutation",
-    "class":"Bard, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"True Resurrection",
@@ -5898,7 +7331,10 @@ var jsonSpellData = [
     "casting_time":"1 hour",
     "level":"9th-level",
     "school":"Necromancy",
-    "class":"Cleric, Druid"
+    "class":[
+      "Cleric", 
+      "Druid"
+    ]
   },
   {
     "name":"True Seeing",
@@ -5913,7 +7349,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Divination",
-    "class":"Bard, Cleric, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"True Strike",
@@ -5927,7 +7369,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Divination",
-    "class":"Bard, Sorcerer, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Tsunami",
@@ -5941,7 +7388,9 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"8th-level",
     "school":"Conjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Unseen Servant",
@@ -5956,7 +7405,12 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Conjuration",
-    "class":"Bard, Ritual Caster, Warlock, Wizard"
+    "class":[
+      "Bard", 
+      "Ritual Caster", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Vampiric Touch",
@@ -5971,7 +7425,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Necromancy",
-    "class":"Warlock, Wizard"
+    "class":[
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Vicious Mockery",
@@ -5985,7 +7442,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"Cantrip",
     "school":"Enchantment",
-    "class":"Bard"
+    "class":[
+      "Bard"
+    ]
   },
   {
     "name":"Vitriolic Sphere",
@@ -6001,7 +7460,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Wall of Fire",
@@ -6017,7 +7479,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Sorcerer, Warlock, Wizard",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ],
     "archetype":"Cleric: Light<br/> Warlock: Fiend",
     "domains":"Light",
     "patrons":"Fiend"
@@ -6035,7 +7503,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Wall of Ice",
@@ -6051,7 +7521,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Wall of Sand",
@@ -6066,7 +7538,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Wall of Stone",
@@ -6081,7 +7555,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"5th-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "circles":"Desert, Mountain"
   },
   {
@@ -6098,7 +7576,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
   {
     "name":"Wall of Water",
@@ -6113,7 +7593,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Warding Bond",
@@ -6128,7 +7612,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Abjuration",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Warding Wind",
@@ -6142,7 +7628,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Evocation",
-    "class":"Bard, Druid, Sorcerer"
+    "class":[
+      "Bard", 
+      "Druid", 
+      "Sorcerer"
+    ]
   },
   {
     "name":"Water Breathing",
@@ -6157,7 +7647,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Druid, Ranger, Ritual Caster, Sorcerer, Wizard",
+    "class":[
+      "Druid", 
+      "Ranger", 
+      "Ritual Caster", 
+      "Sorcerer", 
+      "Wizard"
+    ],
     "circles":"Coast"
   },
   {
@@ -6172,7 +7668,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Transmutation",
-    "class":"Cleric, Druid, Ranger, Ritual Caster, Sorcerer",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger", 
+      "Ritual Caster", 
+      "Sorcerer"
+    ],
     "circles":"Coast, Swamp"
   },
   {
@@ -6188,7 +7690,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"4th-level",
     "school":"Conjuration",
-    "class":"Druid, Sorcerer, Wizard"
+    "class":[
+      "Druid", 
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Web",
@@ -6219,7 +7725,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Illusion",
-    "class":"Wizard"
+    "class":[
+      "Wizard"
+    ]
   },
   {
     "name":"Whirlwind",
@@ -6234,7 +7742,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"7th-level",
     "school":"Evocation",
-    "class":"Druid, Wizard"
+    "class":[
+      "Druid", 
+      "Wizard"
+    ]
   },
   {
     "name":"Wind Walk",
@@ -6249,7 +7760,9 @@ var jsonSpellData = [
     "casting_time":"1 minute",
     "level":"6th-level",
     "school":"Transmutation",
-    "class":"Druid"
+    "class":[
+      "Druid"
+    ]
   },
 
   {
@@ -6265,7 +7778,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"3rd-level",
     "school":"Evocation",
-    "class":"Cleric, Druid, Ranger",
+    "class":[
+      "Cleric", 
+      "Druid", 
+      "Ranger"
+    ],
     "archetype":"Cleric: Nature",
     "domains":"Nature"
   },
@@ -6281,7 +7798,10 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"9th-level",
     "school":"Conjuration",
-    "class":"Sorcerer, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Wizard"
+    ]
   },
   {
     "name":"Witch Bolt",
@@ -6297,7 +7817,11 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Sorcerer, Warlock, Wizard"
+    "class":[
+      "Sorcerer", 
+      "Warlock", 
+      "Wizard"
+    ]
   },
   {
     "name":"Word of Recall",
@@ -6311,7 +7835,9 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"6th-level",
     "school":"Conjuration",
-    "class":"Cleric"
+    "class":[
+      "Cleric"
+    ]
   },
   {
     "name":"Wrathful Smite",
@@ -6325,7 +7851,9 @@ var jsonSpellData = [
     "casting_time":"1 bonus action",
     "level":"1st-level",
     "school":"Evocation",
-    "class":"Paladin"
+    "class":[
+      "Paladin"
+    ]
   },
   {
     "name":"Zone of Truth",
@@ -6339,7 +7867,13 @@ var jsonSpellData = [
     "casting_time":"1 action",
     "level":"2nd-level",
     "school":"Enchantment",
-    "class":"Bard, Cleric, Paladin",
+    "class":[
+      "Bard", 
+      "Cleric", 
+      "Paladin"
+    ],
     "oaths":"Devotion"
   }
-];
+]
+
+export default spells;
